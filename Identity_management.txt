@@ -1,0 +1,25 @@
+Here's a simplified version of the steps to implement IAM in AWS without MFA using the Free Tier:
+
+### 1. **Create AWS Free Tier Account**
+   - Sign up for the [AWS Free Tier](https://aws.amazon.com/free/) to get free access to various AWS services, including IAM.
+
+### 2. **Create IAM Users and Groups**
+   - Go to the **IAM Dashboard** in the AWS Management Console.
+   - Click **Users** → **Add user**, set up user access (e.g., Console Access).
+   - Assign permissions: Attach predefined policies (like `AdministratorAccess`), or create custom policies.
+   - Optionally, create **IAM Groups** (e.g., Admins) and assign users to these groups.
+
+### 3. **Create and Attach Custom IAM Policies**
+   - Go to **Policies** in IAM to create and customize policies (e.g., permissions for S3 buckets, EC2 instances).
+   - Attach policies to users or groups.
+
+### 4. **Assign IAM Roles for EC2/Lambda**
+   - Go to **Roles** → **Create role**.
+   - Select **EC2** or **Lambda**, and assign the necessary permissions (e.g., `AmazonEC2FullAccess`).
+   - Assign the role to an EC2 instance or Lambda function.
+
+### 5. **Skip Multi-Factor Authentication (MFA)**
+   - MFA is optional, so you can skip the MFA setup if you don't want to enable it.
+
+### Conclusion:
+You now have a basic setup of IAM without MFA, with users, groups, policies, and roles in place, using the AWS Free Tier for practice.
