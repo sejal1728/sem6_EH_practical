@@ -1,0 +1,12 @@
+1.    sudo grep -c "svm\|vmx" /proc/cpuinfo
+2.	sudo apt update
+3.	sudo apt upgrade
+4.	sudo apt install cpu-checker
+5.	kvm-ok
+6.	sudo apt install qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
+7.	Sudo systemctl enable –now libvirtd
+8.	subo systemctl start libvirtd
+9.	subo systemctl status libvirtd
+10. sudo adduser sejal libvirt
+11. sudo adduser sejal kvm
+12.	sudo apt install virt-manager
